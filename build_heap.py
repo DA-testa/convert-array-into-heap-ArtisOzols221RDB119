@@ -17,7 +17,7 @@ def heapsort(i,n,data,swaps):
         data[i],data[x]=data[x],data[i]
         swaps.append(i)
         swaps.append(x)
-        heapsort(x,n,data,swaps)
+        i=x
 
 def main():
     txt=input().split()
