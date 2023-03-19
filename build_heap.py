@@ -20,21 +20,26 @@ def heapsort(i,n,data,swaps):
         i=x
 
 def main():
-    txt=input().split()
-    if txt[0]=='I':
-        n = int(input())
-        data = list(map(int, input().split()))
-    elif txt[0]=='F':
-        file="tests/"+input()
-        with open(file, mode='r') as filename:
-            n=int(filename.readline())
-            data = list(map(int, filename.readline().split()))
+    try:
+        txt=input().split()
+        if txt[0]=='I':
+            n = int(input())
+            data = list(map(int, input().split()))
+        elif txt[0]=='F':
+            file="tests/"+input()
+            with open(file, mode='r') as filename:
+                n=int(filename.readline())
+                data = list(map(int, filename.readline().split()))
 
-    assert len(data) == n
-    swaps = build_heap(data)
-    print(len(swaps))
-    for i, j in swaps:
-        print(i, j)
+        assert len(data) == n
+        swaps = build_heap(data)
+        print(len(swaps))
+        for i, j in swaps:
+            print(i, j)
+        
+    except Exception as ex:
+        print("Error")
+        return
 
 if __name__ == "__main__":
     main()
