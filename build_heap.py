@@ -16,7 +16,7 @@ def heapsort(i,n,data,swaps):
     if i!=x:
         data[i],data[x]=data[x],data[i]
         swaps.append((i,x))
-        i=x
+        heapsort(x,n,data,swaps)
 
 def main():
     try:
