@@ -23,7 +23,7 @@ def main():
     txt=input().split()
     if txt[0]=='I':
         n = int(input())
-        data = list(map(int, txt))
+        data = list(map(int, input().split()))
     elif txt[0]=='F':
         file="tests/"+input()
         with open(file, mode='r') as filename:
