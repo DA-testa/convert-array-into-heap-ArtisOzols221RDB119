@@ -11,7 +11,7 @@ def heapsort(i,n,data,swaps):
     z=2*i+2
     if n>y and data[x]>data[y]:
         x=y
-    if n>z and data[x]>data[y]:
+    if n>z and data[x]>data[z]:
         x=z
     if i!=x:
         data[i],data[x]=data[x],data[i]
